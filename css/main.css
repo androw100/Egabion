@@ -1,0 +1,728 @@
+.navbar {
+  padding: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  /* تأثير ضبابي */
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* للتأكد من أن الصورة لا تتشوه */
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12;
+  /* تغيير اللون عند التمرير */
+  transform: translateY(-3px);
+  /* تحريك الرابط للأعلى عند التمرير */
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+  /* لضمان وضوح الزر */
+}
+
+.navbar.fixed-top {
+  background-color: rgba(0, 0, 0, 0.75);
+  /* خلفية شفافة */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* إضافة تأثير الشفافية عند التمرير */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* تصميم القسم الرئيسي (home) */
+.home {
+  background-image: url('../imgs/p20.jpg');
+  /* استبدل هذا بالرابط المناسب للصورة الخلفية */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* تغطي الشاشة بالكامل */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.bg-black.bg-opacity-75 {
+  background-color: rgba(0, 0, 0, 0.75);
+  /* خلفية سوداء مع شفافية */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 80%;
+  /* عرض أكبر للـ SVG */
+  height: auto;
+  font-family: "Russo One", sans-serif;
+}
+
+svg text {
+  letter-spacing: 2px;
+  /* يمكنك زيادة هذه القيمة حسب الحاجة */
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #eff0f1;
+  font-size: 130px;
+  /* حجم الخط */
+}
+
+svg text:nth-of-type(2) {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #eff0f1;
+}
+
+
+
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(255, 255, 255);
+  }
+
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 3;
+  }
+
+  100% {
+    fill: rgba(72, 138, 204, 1);
+    stroke: rgba(255, 255, 255, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+
+
+
+
+
+.my-contant {
+  z-index: 1;
+  /* لضمان أن المحتوى يظهر فوق الخلفية */
+  text-align: center;
+}
+
+.my-contant h1 {
+  font-size: 3.5rem;
+  /* حجم كبير للعنوان */
+  font-weight: bold;
+  color: #ffffff;
+  /* نص أبيض */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;
+}
+
+.my-contant p {
+  font-size: 1.5rem;
+  /* حجم نص الفقرة */
+  font-weight: 300;
+  color: #f0f0f0;
+  /* لون نص فاتح */
+}
+
+.vh-100 {
+  height: 100vh;
+  /* لضمان تغطية الصفحة بالكامل */
+}
+
+
+
+/* تحسين التصميم للشاشات الصغيرة باستخدام media queries */
+@media (max-width: 768px) {
+  .logo {
+    width: 50px;
+    /* تصغير الشعار في الشاشات الصغيرة */
+  }
+
+  .navbar-nav {
+    padding-right: 0;
+    text-align: center;
+    /* مركز العناصر في الشاشات الصغيرة */
+  }
+
+  .navbar-collapse {
+    text-align: center;
+    /* تنسيق العناصر في الشاشات الصغيرة */
+  }
+
+  .my-contant {
+    padding-top: 30%;
+    /* زيادة المسافة العلوية للشاشات الصغيرة */
+  }
+
+  .my-contant h1 {
+    font-size: 40px;
+    /* تقليل حجم النص */
+  }
+
+  .my-contant p {
+    font-size: 18px;
+    /* تقليل حجم النص للوصف */
+  }
+}
+
+@media (max-width: 576px) {
+  .my-contant {
+    padding-top: 40%;
+    /* زيادة المسافة العلوية للشاشات الأصغر */
+  }
+
+  .my-contant h1 {
+    font-size: 30px;
+    /* تصغير حجم النص أكثر للشاشات الصغيرة جدا */
+  }
+
+  .my-contant p {
+    font-size: 16px;
+    /* تقليل حجم الوصف أكثر */
+  }
+}
+
+#about {
+  background-color: #f0f8ff;
+  /* لون خلفية ناعم */
+  padding: 60px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف للقسم */
+}
+
+#about .hero img {
+  width: 100%;
+  max-width: 400px;
+  /* التحكم في حجم الصورة */
+  border-radius: 15px;
+  /* زوايا مستديرة للصورة */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف للصورة */
+}
+
+#about .context h3 {
+  color: #007bff;
+  /* لون أزرق للعناوين */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about .context p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+#about .context span.text-muted {
+  color: #555;
+  /* لون رمادي للنصوص الثانوية */
+}
+
+#about .context .btn-1 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+#about .context .btn-1:hover {
+  background-color: #0056b3;
+  /* تغيير اللون عند التمرير */
+}
+
+#about .context a {
+  text-decoration: none;
+}
+
+#about .context {
+  padding-top: 20px;
+}
+
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.back-img {
+  position: relative;
+  /* لضمان أن الطبقة الشفافة ستتداخل مع الصورة */
+  background-image: url(../imgs/face.png);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.back-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5);
+  /* اللون الأزرق مع شفافية بنسبة 50% */
+  z-index: 1;
+  /* الطبقة الشفافة ستظهر فوق الصورة */
+}
+
+.iii {
+  position: relative;
+  /* لضمان أن النص سيظهر فوق الطبقة الشفافة */
+  z-index: 2;
+  /* النص والمحتوى سيظهر فوق الطبقة الشفافة */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  /* المحاذاة أفقياً */
+  align-items: center;
+  /* المحاذاة عمودياً */
+  text-align: center;
+  /* لجعل النصوص في المنتصف */
+
+}
+
+.icon-7,
+.icon-8,
+.icon-9 {
+  border: 4px solid white;
+  /* حجم ولون الحدود */
+  border-radius: 50%;
+  /* لجعل الحدود دائرية */
+  width: 80px;
+  /* عرض الأيقونة */
+  height: 80px;
+  /* ارتفاع الأيقونة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  /* لتوسيط الأيقونة داخل العمود */
+  transition: all 0.3s ease;
+  /* إضافة تأثير انتقال سلس */
+}
+
+.icon-7:hover,
+.icon-8:hover,
+.icon-9:hover {
+  border-color: #00f;
+  /* تغيير لون الحدود عند تمرير الفأرة */
+  background-color: rgba(0, 0, 255, 0.2);
+  /* إضافة خلفية شفافة باللون الأزرق */
+  transform: scale(1.1);
+  /* تكبير الأيقونة عند تمرير الفأرة */
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  /* توزيع الأعمدة بالتساوي عبر الشاشة */
+  align-items: center;
+  /* توسيط الأعمدة عمودياً */
+  width: 100%;
+  /* ضمان أن الصف يأخذ عرض الصفحة بالكامل */
+}
+
+.col-md-3 {
+  flex: 1;
+  /* كل عمود يأخذ جزءاً متساوياً من عرض الشاشة */
+  max-width: 25%;
+  /* تقييد عرض كل عمود بأقصى عرض */
+  text-align: center;
+  /* توسيط النص داخل العمود */
+}
+
+#team {
+  background-color: #f9f9f9;
+  /* لون خلفية خفيف */
+  padding: 50px 0;
+}
+
+#team h2 {
+  color: #333;
+  /* لون داكن للعنوان الرئيسي */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#team p {
+  color: #555;
+  /* لون أفتح قليلاً للنص */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#team .content h3 {
+  color: #007bff;
+  /* لون أزرق للعناوين */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#team .content p {
+  color: #333;
+  /* لون النص الأساسي */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#team .d-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#team .d-flex img {
+  max-width: 250px;
+  /* حجم الصورة */
+  border-radius: 10px;
+  /* زوايا مستديرة قليلاً */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف للصورة */
+}
+
+#team .content {
+  padding-left: 20px;
+}
+
+#team .pe-3 {
+  padding-right: 20px;
+  /* تعديل الفراغ بين الصور والمحتوى */
+}
+
+#team .fw-bold {
+  color: #007bff;
+  /* لون أزرق للعناوين الفرعية */
+}
+
+#team .fs-5 {
+  font-size: 1.1rem;
+  color: #666;
+  /* لون رمادي للنص */
+}
+
+#team .context h2 {
+  color: #ff6f61;
+  /* لون برتقالي للعناوين */
+}
+
+#team .context p {
+  color: #333;
+  /* لون للنص في القسم التعريفي */
+  font-size: 1.3rem;
+}
+
+.hight-bord-container {
+  background-color: #ffffff;
+  padding: 50px 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.context h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.context p {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.profile-container img {
+  border: 5px solid #ecf0f1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e67e22;
+}
+
+p {
+  color: #787a7a;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profile-container {
+  margin-bottom: 40px;
+}
+
+.btn-view-more {
+  background-color: #e67e22;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+#portfolio {
+  background-color: #f9f9f9;
+  /* خلفية خفيفة لجعل الصور تبرز */
+  padding: 60px 0;
+}
+
+#portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#portfolio p {
+  font-size: 1.25rem;
+  color: #777;
+}
+
+#portfolio .col-md-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#portfolio .col-md-3:hover {
+  transform: translateY(-10px);
+  /* تأثير التحريك للأعلى عند التمرير */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* إضافة ظل خفيف */
+}
+
+#portfolio img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  /* حواف مستديرة للصور */
+}
+
+#portfolio .col-8 {
+  padding: 15px;
+}
+
+#portfolio h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  #portfolio h2 {
+    font-size: 2rem;
+  }
+
+  #portfolio p {
+    font-size: 1rem;
+  }
+
+
+
+
+
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    width: 100%;
+    ;
+    /* عرض أكبر للـ SVG */
+    height: auto;
+    font-family: "Russo One", sans-serif;
+  }
+
+  svg text {
+    letter-spacing: 2px;
+    /* يمكنك زيادة هذه القيمة حسب الحاجة */
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #eff0f1;
+    font-size: 130px;
+    /* حجم الخط */
+  }
+
+  svg text:nth-of-type(2) {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #eff0f1;
+  }
+}
+
+
+.back-img3 {
+  position: relative;
+  background-image: url(../imgs/face.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.back-img3 .context-2 i {
+  color: #007aff;
+}
+
+.pp {
+  width: 10%;
+}
+
+.contact {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-10px);
+  /* تأثير تحريك للأعلى عند التمرير */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* إضافة ظل خفيف */
+}
+
+.contact .icoo {
+  font-size: 2.5rem;
+}
+
+.contact h6 {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: #777;
+}
+
+#contact h3 {
+  color: #333;
+}
+
+
+.contact-card {
+  cursor: pointer;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card .icoo {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contact-card h6 {
+  font-weight: bold;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+#last {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+#last .text span {
+  font-size: 1rem;
+}
+
+#last .text span .fw-bold {
+  color: #f39c12;
+  /* لون مميز للمصمم */
+}
